@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+<title>12月新竹SOGO週年慶</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Microsoft JhengHei", sans-serif;
+    background: linear-gradient(135deg, #fff8e7, #ffe8b8);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 92%;
+    max-width: 430px;
+    background: white;
+    border-radius: 28px;
+    padding: 35px 22px 22px;
+    text-align: center;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+}
+
+.moon {
+    font-size: 55px;
+    margin-bottom: 5px;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 900;
+    color: #b66a00;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.rule {
+    background: #fff5d6;
+    border-radius: 16px;
+    padding: 18px 10px;
+    font-size: 20px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.rule strong {
+    color: #d2691e;
+    font-size: 30px;
+}
+
+.draw-btn {
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    border: 11px solid #ffd166;
+    background: #d97706;
+    color: white;
+    font-size: 30px;
+    font-weight: 900;
+    box-shadow: 0 10px 25px rgba(217,119,6,0.35);
+    cursor: pointer;
+    transition: transform 0.15s;
+}
+
+.draw-btn:active {
+    transform: scale(0.93);
+}
+
+.draw-btn:disabled {
+    background: #aaa;
+    border-color: #ddd;
+    box-shadow: none;
+}
+
+.result {
+    min-height: 130px;
+    margin-top: 30px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.prize {
+    display: block;
+    font-size: 64px;
+    color: #d2691e;
+    margin-top: 10px;
+    animation: pop 0.5s ease;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0);
+    }
+
+    70% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.reset-btn {
+    display: none;
+    width: 100%;
+    padding: 16px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 14px;
+    background: #555;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.notice {
+    margin-top: 25px;
+    color: #999;
+    font-size: 13px;
+}
+
+.powered {
+    margin-top: 22px;
+    padding-top: 12px;
+    border-top: 1px solid #eee;
+    color: #bbb;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+body { background: radial-gradient(circle at 12% 15%, #ffe4a555, transparent 30%), radial-gradient(circle at 85% 80%, #e6b65b55, transparent 35%), linear-gradient(140deg,#7f1029,#c3293d 55%,#87162e); padding:28px 0; color:#572734; }
+body::before { content:"✦　　✧　　✦　　✧　　✦"; position:fixed; top:8px; color:#ffe5a4; font-size:24px; letter-spacing:12px; pointer-events:none; }
+.container { position:relative; border:2px solid #efd298; background:linear-gradient(#fffaf0,#fff4e0); box-shadow:0 18px 65px #46051966; padding:25px 22px; }
+.moon {font-size:36px;}
+.title {font-size:29px;color:#a51f38;line-height:1.4;}
+.subtitle {color:#94612e; margin:8px 0 17px;letter-spacing:2px;}
+.rule {background:#f7e5bf; border:1px solid #e8c887; padding:10px; margin-bottom:20px;font-size:17px;}
+.rule strong {color:#af243c;font-size:29px;}
+.wheel-wrap {width:240px;height:240px;position:relative;margin:0 auto 22px;}
+.wheel {width:100%;height:100%;border-radius:50%;border:9px solid #e7b95f; background:conic-gradient(#bd2945 0deg 252deg,#f4ce7c 252deg 360deg); box-shadow:0 8px 22px #9a243b33,inset 0 0 0 4px #fff4ce; transition:transform 4s cubic-bezier(.15,.7,.12,1);position:relative;}
+.pointer {position:absolute;top:-8px;left:calc(50% - 13px);border-left:13px solid transparent;border-right:13px solid transparent;border-top:29px solid #6b1630;z-index:3;filter:drop-shadow(0 2px 1px #fff);}
+.label {position:absolute;font-size:28px;font-weight:900;}
+.label95 {top:126px;left:140px;color:white;transform:rotate(-30deg);}
+.label89 {top:46px;left:23px;color:#7c1830;transform:rotate(-35deg);}
+.hub {position:absolute;left:calc(50% - 29px);top:calc(50% - 29px);width:58px;height:58px;border-radius:50%;background:#fff5dc;border:4px solid #e7b95f;display:grid;place-items:center;color:#a5233c;font-weight:bold;}
+.draw-btn {width:100%;height:auto;border:1px solid #e5b85e;border-radius:15px;background:linear-gradient(100deg,#a51f38,#cf3a4d);padding:17px 10px;font-size:22px;box-shadow:0 7px 18px #b5273933;}
+.draw-btn:disabled {background:#b59a91;color:#fff;}
+.result {min-height:54px;margin-top:18px;font-size:18px;}
+.prize {font-size:48px;color:#b3243d;margin-top:3px;}
+.reset-btn {background:#276454;font-size:18px;padding:14px;margin-top:12px;}
+.notice {color:#876f62;line-height:1.6;margin-top:16px;}
+.powered {color:#ad8970;border-color:#e9d6b3;margin-top:15px;}
+@media(max-width:360px) {.title {font-size:25px;} .container {padding:22px 16px;}}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="moon">🎄 🎁 ✨</div>
+
+    <div class="title">
+        12月新竹SOGO週年慶
+    </div>
+
+    <div class="subtitle">
+        歲末歡慶・好運轉起來
+    </div>
+
+    <div class="rule">
+        單筆消費滿
+        <strong>$2,000</strong>
+        <br>
+        即可轉出 89 折或 95 折優惠
+    </div>
+
+    <div class="wheel-wrap" aria-hidden="true">
+        <div class="pointer"></div>
+        <div class="wheel" id="wheel"><span class="label label95">95折</span><span class="label label89">89折</span></div>
+        <div class="hub">好運</div>
+    </div>
+    <button class="draw-btn" id="drawButton" onclick="drawPrize()">轉出我的折扣</button>
+
+    <div
+        class="result"
+        id="result" role="status" aria-live="polite">
+    </div>
+
+    <button
+        class="reset-btn"
+        id="resetButton"
+        onclick="nextCustomer()"
+    >
+        下一位顧客
+    </button>
+
+    <div class="notice">
+        每次抽獎完成後，請由現場人員操作下一位顧客
+    </div>
+
+    <div class="powered">
+        Powered by TINA
+    </div>
+
+</div>
+
+<script>
+
+let rotation = 0;
+let isDrawing = false;
+let hasDrawn = false;
+
+function drawPrize() {
+
+    if (isDrawing || hasDrawn) {
+        return;
+    }
+
+    isDrawing = true;
+
+    const button = document.getElementById("drawButton");
+    const result = document.getElementById("result");
+
+    button.disabled = true;
+
+    result.innerHTML = "✨ 好運轉動中，祝您抽中好折扣！ ✨";
+
+    // 95折機率70%，89折機率30%；轉盤區域與機率一致。
+    const is95 = Math.random() < 0.70;
+    const prize = is95 ? "95 折" : "89 折";
+    const target = is95 ? 40 + Math.random() * 170 : 270 + Math.random() * 70;
+    rotation += 1800 + ((360 - target - rotation % 360 + 360) % 360);
+    document.getElementById("wheel").style.transform = `rotate(${rotation}deg)`;
+    setTimeout(function() {
+
+        result.innerHTML =
+            "🎉 恭喜抽中 🎉" +
+            "<span class='prize'>" +
+            prize +
+            "</span>";
+
+        hasDrawn = true;
+        isDrawing = false;
+
+        document.getElementById(
+            "resetButton"
+        ).style.display = "block";
+
+    }, 4200);
+}
+
+function nextCustomer() {
+
+    hasDrawn = false;
+    isDrawing = false;
+
+    document.getElementById(
+        "result"
+    ).innerHTML = "";
+
+    document.getElementById(
+        "drawButton"
+    ).disabled = false;
+
+    document.getElementById(
+        "resetButton"
+    ).style.display = "none";
+}
+
+</script>
+
+</body>
+</html>
